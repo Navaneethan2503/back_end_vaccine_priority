@@ -17,6 +17,7 @@ const addressRoutes = require("./routes/address");
 const orderRoutes = require("./routes/order");
 const adminOrderRoute = require("./routes/admin/order.routes");
 const bookingRoutes = require("./routes/booking");
+const confirmedRoutes = require("./routes/confirmed");
 
 //environment variable or you can say constants
 env.config();
@@ -50,6 +51,7 @@ app.use("/api", addressRoutes);
 app.use("/api", orderRoutes);
 app.use("/api", adminOrderRoute);
 app.use("/api", bookingRoutes);
+app.use("/api", confirmedRoutes);
 
 app.listen(4000, () => {
   console.log(`Server is running on port 4000`);
